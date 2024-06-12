@@ -9,6 +9,20 @@ This repository contains the configuration files for managing macOS system setti
 
 ```
 ├── Makefile
+├── README.md
+├── configs
+│   └── sketchybar
+│       ├── plugins
+│       │   ├── date.sh
+│       │   ├── macos-temp-tool
+│       │   ├── net.sh
+│       │   ├── power.sh
+│       │   ├── pressure.sh
+│       │   ├── spotifyIndicator.sh
+│       │   ├── temp.sh
+│       │   ├── time.sh
+│       │   └── window_title.sh
+│       └── sketchybarrc
 ├── flake.lock
 ├── flake.nix
 └── modules
@@ -32,6 +46,7 @@ This repository contains the configuration files for managing macOS system setti
     └── home-manager
         ├── cliPkgs.nix
         ├── default.nix
+        ├── manual.nix
         └── programs
             ├── fzf.nix
             ├── misc.nix
