@@ -8,7 +8,6 @@ This repository contains the configuration files for managing macOS system setti
 ## Structure
 
 ```
-.
 ├── Makefile
 ├── flake.lock
 ├── flake.nix
