@@ -120,33 +120,6 @@ make switch
 
 Feel free to customize the configuration files to suit your needs. The modular structure allows for easy addition and modification of settings and services.
 
-### Example Configuration
-
-Here's an example of how to define user-specific settings in `modules/home-manager/default.nix`:
-```nix
-{ pkgs, username, ... }:
-
-{
-  imports = [
-    ./programs/misc.nix
-    ./programs/fzf.nix
-    ./programs/starship.nix
-  ];
-
-  home = {
-    username = username;
-    homeDirectory = "/Users/${username}";
-    packages = import ./cliPkgs.nix { inherit pkgs; };
-    sessionVariables = {
-      PAGER = "less";
-      CLICOLOR = "1";
-      EDITOR = "nvim";
-    };
-  };
-
-  home.stateVersion = "24.05";
-}
-```
 
 ## Special Note: Post-Activation Script
 
