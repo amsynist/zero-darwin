@@ -1,9 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
-  
-
+{pkgs, ...}: {
   environment = {
     shells = with pkgs; [bash zsh];
     loginShell = pkgs.zsh;
@@ -11,6 +6,4 @@
     systemPath = ["/usr/local/bin"];
     pathsToLink = ["/Applications"];
   };
-
- 
 }
