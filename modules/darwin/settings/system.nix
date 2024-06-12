@@ -20,7 +20,7 @@
         autohide = true;
 
         # Style options
-        orientation = "right";
+        orientation = "bottom";
         show-recents = false;
       };
 
