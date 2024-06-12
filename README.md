@@ -143,7 +143,7 @@ system.activationScripts.postUserActivation.text = ''
 
 ### Warning
 
-**Uncomment the above activation script if you are not aware**
+**Comment the above activation script if you are not aware**
 
 - Forcefully restarting the Dock can disrupt the user experience and may result in lost data if any applications are open in the Dock.
 - If you are unsure about the implications of these commands, it is recommended to comment out this section by adding `#` at the beginning of each line.
@@ -155,3 +155,4 @@ Contributions are welcome! Feel free to open issues or pull requests to improve 
 ---
 
 This README provides an overview and guide for using and customizing your Nix-Darwin and Home Manager setup. Feel free to adjust the details according to your specific setup and preferences.
+
