@@ -1,5 +1,7 @@
 
 ---
+<img width="1680" alt="Screenshot 2024-06-12 at 23 10 06" src="https://github.com/amsynist/zero-darwin/assets/50878560/3dac8cba-bdf7-40ce-9c8c-96009809756a">
+
 
 # Nix-Darwin Configuration
 
