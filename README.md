@@ -1,4 +1,3 @@
-Got it! I will add the snippet for `manual.nix` and include the proper post-activation script details in the Darwin configuration only. Here's the updated README:
 
 ---
 
