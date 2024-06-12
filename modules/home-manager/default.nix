@@ -8,6 +8,7 @@
     ./programs/misc.nix # Miscellaneous programs configuration
     ./programs/fzf.nix # FZF (fuzzy finder) configuration
     ./programs/starship.nix # Starship prompt configuration
+    ./configs.nix
   ];
 
   home = {
@@ -25,6 +26,8 @@
       EDITOR = "nvim"; # Set the default editor to 'nvim' (Neovim)
     };
   };
+
+
 
   # State version for backward compatibility with Home Manager
   # Don't change this when you change package input. Leave it alone.

@@ -51,5 +51,5 @@ status: ## Show the current status
 .PHONY: darwin-refresh
 darwin-refresh: ## Refresh Nix-Darwin configuration
 	@echo "Refreshing Nix-Darwin configuration..."
-	@darwin-rebuild switch --flake .
+	@darwin-rebuild switch --flake . --show-trace
 

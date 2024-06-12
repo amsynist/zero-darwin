@@ -19,7 +19,7 @@
 
       character = {
         success_symbol = "[ ➜ ](bold #00FFFF)";
-        error_symbol = "[\\$](bright-red bold)";
+        error_symbol = "[ ➜ ](bright-red bold)";
       };
 
       cmd_duration = {
