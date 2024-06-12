@@ -1,4 +1,3 @@
-Sure, here's the updated README that includes the explanation and warning about the `system.activationScripts.postUserActivation` script.
 
 ---
 
