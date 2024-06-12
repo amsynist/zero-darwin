@@ -1,11 +1,9 @@
-
+### Voila! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">   | Zero-Darwin [Nix] Configuration
 ---
+
 
 ![Boy editing neon](https://github.com/amsynist/zero-darwin/assets/50878560/c69fbd50-1634-4881-986b-bcbeb268f056)
 
-
-
-# Nix-Darwin Configuration
 
 This repository contains the configuration files for managing macOS system settings and user environments declaratively using Nix-Darwin and Home Manager. 
 
