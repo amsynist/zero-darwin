@@ -1,3 +1,4 @@
+Got it! I will add the snippet for `manual.nix` and include the proper post-activation script details in the Darwin configuration only. Here's the updated README:
 
 ---
 
@@ -13,15 +14,6 @@ This repository contains the configuration files for managing macOS system setti
 ├── configs
 │   └── sketchybar
 │       ├── plugins
-│       │   ├── date.sh
-│       │   ├── macos-temp-tool
-│       │   ├── net.sh
-│       │   ├── power.sh
-│       │   ├── pressure.sh
-│       │   ├── spotifyIndicator.sh
-│       │   ├── temp.sh
-│       │   ├── time.sh
-│       │   └── window_title.sh
 │       └── sketchybarrc
 ├── flake.lock
 ├── flake.nix
@@ -30,27 +22,13 @@ This repository contains the configuration files for managing macOS system setti
     │   ├── default.nix
     │   ├── modules
     │   │   └── customServices
-    │   │       ├── borders.nix
-    │   │       └── default.nix
     │   ├── services
-    │   │   ├── borders.nix
-    │   │   ├── default.nix
-    │   │   ├── sketchybar.nix
-    │   │   ├── skhd.nix
-    │   │   └── yabai.nix
     │   └── settings
-    │       ├── default.nix
-    │       ├── environment.nix
-    │       ├── nix-settings.nix
-    │       └── system.nix
     └── home-manager
         ├── cliPkgs.nix
         ├── default.nix
         ├── manual.nix
         └── programs
-            ├── fzf.nix
-            ├── misc.nix
-            └── starship.nix
 ```
 
 ### Top-Level Files
@@ -83,10 +61,17 @@ This repository contains the configuration files for managing macOS system setti
 
 - `cliPkgs.nix`: CLI packages configuration.
 - `default.nix`: Main entry point for Home Manager configuration.
+- `manual.nix`: Post-activation and manual scripting, such as file moving and symlink creation.
 - `programs`: Specific program configurations.
   - `fzf.nix`: Configuration for FZF (fuzzy finder).
   - `misc.nix`: Miscellaneous program settings.
   - `starship.nix`: Configuration for the Starship prompt.
+
+### Configs
+
+- `sketchybar`: Contains the configuration files and plugins for SketchyBar.
+  - `plugins`: Contains various shell scripts used by SketchyBar.
+  - `sketchybarrc`: Main configuration file for SketchyBar.
 
 ## Usage
 
@@ -130,30 +115,36 @@ make switch
 - **Hardware Configuration**: Manage hardware settings like display resolution and sound settings.
 - **User Environment**: Configure user-specific settings and environment variables using Home Manager.
 
-## Customization
+## Post-Activation and Manual Scripting
 
-Feel free to customize the configuration files to suit your needs. The modular structure allows for easy addition and modification of settings and services.
-
-
-## Special Note: Post-Activation Script
-
-### Purpose
-
-The `system.activationScripts.postUserActivation` script in `modules/darwin/default.nix` is used to apply certain system preference changes without requiring a full system restart. 
+The `manual.nix` file contains scripts and configurations for handling post-activation tasks and manual operations, such as file moving and symlink creation for services like SketchyBar.
 
 ### Script Details
 
-```nix
-system.activationScripts.postUserActivation.text = ''
-  # Following line should allow us to avoid a logout/login cycle
-  /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-  # To reflect Dock Changes (Risky)
-  killall Dock
-'';
-```
+- **Home Manager Activation**:
+  ```nix
+  { lib, pkgs, ... }:
+  {
+    home.activation.sketchybar = lib.hm.dag.entryAfter ["writeBoundary"] ("${pkgs.sketchybar}/bin/sketchybar --reload");
 
-- `/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u`: Applies system settings immediately, avoiding the need for a logout/login cycle.
-- `killall Dock`: Restarts the Dock to apply any changes made to its configuration.
+    home.file = {
+      ".config/sketchybar".source = ../../configs/sketchybar;
+    };
+  }
+  ```
+
+- **Post-Activation Script in Darwin Configuration**:
+  ```nix
+  system.activationScripts.postUserActivation.text = ''
+    # Following line should allow us to avoid a logout/login cycle
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    # To reflect Dock Changes (Risky)
+    killall Dock
+  '';
+  ```
+
+  - `/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u`: Applies system settings immediately, avoiding the need for a logout/login cycle.
+  - `killall Dock`: Restarts the Dock to apply any changes made to its configuration.
 
 ### Warning
 
@@ -162,6 +153,10 @@ system.activationScripts.postUserActivation.text = ''
 - Forcefully restarting the Dock can disrupt the user experience and may result in lost data if any applications are open in the Dock.
 - If you are unsure about the implications of these commands, it is recommended to comment out this section by adding `#` at the beginning of each line.
 
+## Customization
+
+Feel free to customize the configuration files to suit your needs. The modular structure allows for easy addition and modification of settings and services.
+
 ## Contribution
 
 Contributions are welcome! Feel free to open issues or pull requests to improve this configuration.
@@ -169,4 +164,3 @@ Contributions are welcome! Feel free to open issues or pull requests to improve 
 ---
 
 This README provides an overview and guide for using and customizing your Nix-Darwin and Home Manager setup. Feel free to adjust the details according to your specific setup and preferences.
-
