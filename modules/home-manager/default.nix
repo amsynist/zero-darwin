@@ -8,7 +8,7 @@
     ./programs/misc.nix # Miscellaneous programs configuration
     ./programs/fzf.nix # FZF (fuzzy finder) configuration
     ./programs/starship.nix # Starship prompt configuration
-    ./configs.nix
+    ./manual.nix
   ];
 
   home = {

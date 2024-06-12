@@ -6,24 +6,24 @@
 
 # If first word is longer than 10 characters, print first 7 characters
 # If first word is shorter than 10 characters, print first word and first 2 characters of second word if any
-# LABEL="$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}' | xargs networksetup -getairportnetwork | sed "s/Current Wi-Fi Network: //" | 
-#   awk '{ 
+# LABEL="$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}' | xargs networksetup -getairportnetwork | sed "s/Current Wi-Fi Network: //" |
+#   awk '{
 #     if ($0 ~ /You are not associated with an AirPort network/) {
 #       print "N/A";
 #       exit;
 #     }
-#     else if (length($1) > 10) { 
-#       label=substr($1, 1, 7); 
-#       gsub(/ $/, "", label); 
-#       print label "..."; 
-#     } 
+#     else if (length($1) > 10) {
+#       label=substr($1, 1, 7);
+#       gsub(/ $/, "", label);
+#       print label "...";
+#     }
 #     else {
-#       print $1; 
-#       if (NF > 1) { 
+#       print $1;
+#       if (NF > 1) {
 #         print(" ");
-#         printf substr($2, 1, 2) "..."; 
-#       } 
-#     } 
+#         printf substr($2, 1, 2) "...";
+#       }
+#     }
 #   }')"
 #
 # Get Wi-Fi network information
@@ -37,10 +37,10 @@ if echo "$CURRENT_NETWORK" | grep -q "You are not associated with an AirPort net
     LABEL="N/A"
     sketchybar --set net_logo background.color=0xff3C3E4F --set net label.color=0xff1e1d2e
 else
-    sketchybar --set net_logo background.color=0xffE0A3AD --set net label.color=0xffECEFF4 
+    sketchybar --set net_logo background.color=0xffE0A3AD --set net label.color=0xffECEFF4
     # Truncate the current network name if longer than 10 characters
-    if [ "$(echo "$CURRENT_NETWORK" | awk '{ print length($1) }')" -gt 10 ]; then
-        label=$(echo "$CURRENT_NETWORK" | awk '{ print substr($0, 1, 7) }')
+    if [ "$(echo "$CURRENT_NETWORK" | awk '{ print length($1) }')" -gt 15 ]; then
+        label=$(echo "$CURRENT_NETWORK" | awk '{ print substr($0, 1, 10) }')
         label=$(echo "$label" | sed 's/ *$//')
         LABEL="$label"...
     else
