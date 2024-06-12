@@ -39,6 +39,13 @@
 
   # Used for backwards compatibility, please read the changelog before changing.
   system.stateVersion = 4;
+    # To Update Few System Preferences without a system restart :)
+  system.activationScripts.postUserActivation.text = ''
+    # Following line should allow us to avoid a logout/login cycle
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    #To reflect Dock Changes (Risky)
+    killall Dock
+  '';
 
   programs.zsh.enable = true;
 }

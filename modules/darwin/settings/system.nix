@@ -4,6 +4,14 @@
     keyboard.remapCapsLockToEscape = true;
 
     defaults = {
+      finder = {
+        FXEnableExtensionChangeWarning = false;
+        # When performing a search, search the current folder by default
+        FXDefaultSearchScope = "SCcf";
+        QuitMenuItem = true;
+        CreateDesktop = false;
+      };
+
       NSGlobalDomain = {
         # Dark mode
         AppleInterfaceStyle = "Dark";
@@ -13,6 +21,7 @@
 
         # Automatically hide and show the menu bar
         _HIHideMenuBar = true;
+        AppleFontSmoothing = 2;
       };
 
       dock = {
@@ -20,7 +29,7 @@
         autohide = true;
 
         # Style options
-        orientation = "bottom";
+        orientation = "right";
         show-recents = false;
       };
 
@@ -29,6 +38,10 @@
         _FXShowPosixPathInTitle = true;
       };
     };
+     
+
   };
   security.pam.enableSudoTouchIdAuth = true;
+  
+ 
 }
