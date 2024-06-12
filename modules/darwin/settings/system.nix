@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   system = {
     keyboard.enableKeyMapping = true;
     keyboard.remapCapsLockToEscape = true;

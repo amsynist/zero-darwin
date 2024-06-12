@@ -1,8 +1,4 @@
-{
-  pkgs,
-  username,
-  ...
-}: {
+{username, ...}: {
   # Common Nix settings
   nix.settings = {
     build-max-jobs = 10; # Number of build jobs to run in parallel
