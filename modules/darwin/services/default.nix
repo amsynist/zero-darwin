@@ -4,5 +4,6 @@
     ./yabai.nix
     ./sketchybar.nix
     ./borders.nix
+    ./direnv.nix
   ];
 }

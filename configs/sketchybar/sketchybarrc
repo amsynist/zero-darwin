@@ -16,7 +16,7 @@ sketchybar --bar height=40 \
 
 ############## GLOBAL DEFAULTS ##############
 sketchybar --default updates=when_shown \
-                     icon.font="Hack Nerd Font:Bold:16.0" \
+                     icon.font="ZeroCode:Regular:16.0" \
                      icon.color=0xffECEFF4 \
                      icon.highlight_color=0xffE48FA8 \
                      label.font="ZeroCode:Italic:14.0" \
@@ -25,11 +25,12 @@ sketchybar --default updates=when_shown \
                      background.height=30
 
 sketchybar --add item logo left \
-           --set logo icon=  \
+           --set logo icon=  \
                  icon.color=0xff010101 \
                  icon.padding_left=16 \
                  icon.padding_right=16 \
-                 background.color=0xffA5E0D5 \
+                 icon.font="ZeroCode:Regular:18.0" \
+                 background.color=0xff91d7e3 \
                  background.padding_right=8 \
                  background.padding_left=4 \
                  click_script="sketchybar --update"

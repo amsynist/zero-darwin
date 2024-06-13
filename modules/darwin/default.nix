@@ -46,6 +46,5 @@
     #To reflect Dock Changes (Risky)
     killall Dock
   '';
-
-  programs.zsh.enable = true;
+programs.zsh.enable = true;
 }

@@ -15,5 +15,8 @@ with pkgs; [
   devenv
   direnv
   jq
+  atuin
+  bat
   jankyborders
+  unimatrix
 ]
