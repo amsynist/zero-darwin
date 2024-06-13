@@ -1,4 +1,5 @@
-### Voila! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">   | Zero-Darwin [Nix] Configuration
+ Voila! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">   
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Futura&pause=1000&background=8489FF00&random=false&width=435&lines=%5BZero-Darwin%5D+My+Dotfiles+Configuration(Nix))](https://git.io/typing-svg)
 ---
 
 
