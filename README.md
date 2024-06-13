@@ -1,9 +1,8 @@
  Voila! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">   
- </h2><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="500" />
- 
- [![Typing SVG](https://readme-typing-svg.demolab.com?font=Futura&pause=1000&background=8489FF00&random=false&width=435&lines=%5BZero-Darwin%5D+My+Dotfiles+Configuration(Nix))](https://git.io/typing-svg)
- 
-</h2><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="500" />
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="700" />
+
+ [![Typing SVG](https://readme-typing-svg.demolab.com?font=Futura&pause=1000&background=8489FF00&random=false&width=635&lines=>>%20%20%20%5BZero-Darwin%5D+My+Dotfiles+Configuration+(Nix))](https://git.io/typing-svg)
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="700" />
 
 ![Boy editing neon](https://github.com/amsynist/zero-darwin/assets/50878560/c69fbd50-1634-4881-986b-bcbeb268f056)
 
