@@ -6,6 +6,8 @@
 
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="750" />
 
+
+![Boy editing neon](https://github.com/amsynist/zero-darwin/assets/50878560/c69fbd50-1634-4881-986b-bcbeb268f056)
 ## Nix-Darwin & Home Manager: Your macOS dotfiles, perfected.
 > **Harnessing Nix,Flakes,Nix-Darwin, and Home Manager to manage macOS system settings and dotfile configurations**
 ### Structure
