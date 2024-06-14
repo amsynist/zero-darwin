@@ -2,7 +2,6 @@
  
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="750" /> 
  
- [<img src="https://nixos.org/logo/nixos-logo-only-hires.png" width="70" align="right" alt="NixOS">](https://nixos.org)
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Zen+Dots&size=20&pause=1000&center=false&vCenter=true&random=true&width=835&height=20&lines=%5Bzero-darwin%5D+My+Personal+Nixified+Dotfiles+~%2F.+%F0%9F%93%82)](https://git.io/typing-svg)
 
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="750" />
