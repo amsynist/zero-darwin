@@ -6,9 +6,9 @@
 
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="750" />
 
-# Nix-Darwin & Home Manager: Your macOS dotfiles, perfected.
-
-## Structure
+## Nix-Darwin & Home Manager: Your macOS dotfiles, perfected.
+> **Harnessing Nix, Nix-Darwin, and Home Manager to manage macOS system settings and dotfile configurations**
+### Structure
 
 ```
 ├── Makefile
