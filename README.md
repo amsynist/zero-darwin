@@ -1,13 +1,12 @@
- Voila! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">   
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="700" />
+ <h2>Voila! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px">   </h2>
+ <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="850" />
 
- [![Typing SVG](https://readme-typing-svg.demolab.com?font=Futura&pause=1000&background=8489FF00&random=false&width=635&lines=>>%20%20%20%5BZero-Darwin%5D+My+Dotfiles+Configuration+(Nix))](https://git.io/typing-svg)
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="700" />
+ [<img src="https://nixos.org/logo/nixos-logo-only-hires.png" width="70" align="left" alt="NixOS">](https://nixos.org)
 
-![Boy editing neon](https://github.com/amsynist/zero-darwin/assets/50878560/c69fbd50-1634-4881-986b-bcbeb268f056)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Zen+Dots&size=25&pause=1000&center=false&vCenter=true&random=true&width=835&height=70&lines=%5Bzero-darwin%5D+My+Personal+Nixified+Dotfiles+~%2F.+%F0%9F%93%82)](https://git.io/typing-svg)
+ <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="850" />
 
-
-This repository contains the configuration files for managing macOS system settings and user environments declaratively using Nix-Darwin and Home Manager. 
+# Nix-Darwin & Home Manager: Your macOS dotfiles, perfected.
 
 ## Structure
 
