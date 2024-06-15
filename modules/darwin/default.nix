@@ -27,7 +27,7 @@
   # ──────────────────────────────────────────────────────────────────────
 
   imports = [
-    ./modules/customServices
+    ./custom
     ./settings
     ./services
   ];
