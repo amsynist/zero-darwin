@@ -12,7 +12,7 @@
 > **Harnessing Nix,Flakes,Nix-Darwin, and Home Manager to manage macOS system settings and dotfile configurations**
 ### Structure
 
-```rust
+```css
 ├── Makefile
 ├── README.md
 ├── configs
