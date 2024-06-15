@@ -12,29 +12,28 @@
 > **Harnessing Nix,Flakes,Nix-Darwin, and Home Manager to manage macOS system settings and dotfile configurations**
 ### Structure
 
+```rust
+📦zero-darwin
+ ┣ 📂configs
+ ┃ ┣ 📂sketchybar
+ ┃ ┗ 📂wezterm
+ ┣ 📂modules
+ ┃ ┣ 📂darwin
+ ┃ ┃ ┣ 📂modules
+ ┃ ┃ ┃ ┗ 📂customServices
+ ┃ ┃ ┣ 📂services
+ ┃ ┃ ┣ 📂settings
+ ┃ ┃ ┗ 📜default.nix
+ ┃ ┗ 📂home-manager
+ ┃ ┃ ┣ 📂programs
+ ┃ ┃ ┣ 📜cliPkgs.nix
+ ┃ ┃ ┣ 📜default.nix
+ ┃ ┃ ┗ 📜manual.nix
+ ┣ 📜Makefile
+ ┣ 📜README.md
+ ┣ 📜flake.lock
+ ┗ 📜flake.nix
 ```
-├── Makefile
-├── README.md
-├── configs
-│   └── sketchybar
-│       ├── plugins
-│       └── sketchybarrc
-├── flake.lock
-├── flake.nix
-└── modules
-    ├── darwin
-    │   ├── default.nix
-    │   ├── modules
-    │   │   └── customServices
-    │   ├── services
-    │   └── settings
-    └── home-manager
-        ├── cliPkgs.nix
-        ├── default.nix
-        ├── manual.nix
-        └── programs
-```
-
 ### Top-Level Files
 
 - `Makefile`: Contains commands to simplify common tasks, such as updating and building configurations.
