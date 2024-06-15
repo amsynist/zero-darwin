@@ -13,26 +13,26 @@
 ### Structure
 
 ```rust
-📦zero-darwin
- ┣ 📂configs
- ┃ ┣ 📂sketchybar
- ┃ ┗ 📂wezterm
- ┣ 📂modules
- ┃ ┣ 📂darwin
- ┃ ┃ ┣ 📂modules
- ┃ ┃ ┃ ┗ 📂customServices
- ┃ ┃ ┣ 📂services
- ┃ ┃ ┣ 📂settings
- ┃ ┃ ┗ 📜default.nix
- ┃ ┗ 📂home-manager
- ┃ ┃ ┣ 📂programs
- ┃ ┃ ┣ 📜cliPkgs.nix
- ┃ ┃ ┣ 📜default.nix
- ┃ ┃ ┗ 📜manual.nix
- ┣ 📜Makefile
- ┣ 📜README.md
- ┣ 📜flake.lock
- ┗ 📜flake.nix
+├── Makefile
+├── README.md
+├── configs
+├── flake.lock
+├── flake.nix
+└── modules
+    ├── darwin
+    │   ├── custom
+    │   ├── default.nix
+    │   ├── services
+    │   └── settings
+    │       ├── default.nix
+    │       ├── environment.nix
+    │       ├── nix-settings.nix
+    │       └── system.nix
+    └── home-manager
+        ├── cliPkgs.nix
+        ├── default.nix
+        ├── manual.nix
+        └── programs
 ```
 ### Top-Level Files
 
