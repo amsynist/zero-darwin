@@ -17,6 +17,8 @@ with pkgs; [
   jq
   atuin
   bat
+  wezterm
+  python313
   jankyborders
   unimatrix
 ]

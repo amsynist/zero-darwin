@@ -13,9 +13,12 @@
   nix.configureBuildUsers = true;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
+    http-connections = 128
+    max-substitution-jobs = 128
   '';
   services.nix-daemon.enable = true;
 
   nix.optimise.automatic = true;
   nix.settings.auto-optimise-store = true;
+
 }
