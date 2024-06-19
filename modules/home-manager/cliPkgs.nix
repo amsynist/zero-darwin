@@ -18,6 +18,7 @@ with pkgs; [
   atuin
   bat
   wezterm
+  nodejs_22
   python313
   jankyborders
   unimatrix

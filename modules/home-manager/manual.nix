@@ -5,4 +5,7 @@ home.activation.sketchybar = lib.hm.dag.entryAfter ["writeBoundary"] ("${pkgs.sk
  home.file = {
     ".config/sketchybar".source = ../../configs/sketchybar;
   };
+  home.file = {
+    ".config/nvim".source = ../../configs/nvim;
+  };
 }
