@@ -4,5 +4,7 @@
     direnvrcExtra = ''
     echo "Loaded direnv "
     '';
+    silent = true;
+
   };
 }

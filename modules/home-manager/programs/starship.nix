@@ -5,11 +5,20 @@
     settings = {
       add_newline = true;
       format = ''
-        [ 󰊠  ](bold italic #FFA500) [](bg:#769ff0 fg:#769ff0)$directory [](bold italic skyblue)$git_branch$python$golang$nodejs
+        [ 󰊠  ](bold italic #FFA500) [](bg:#769ff0 fg:#769ff0)$directory [](bold italic skyblue)$git_branch$python$golang$direnv$nodejs
         
         [  λ](bold #00FFFF)$character
       '';
-
+      direnv = {
+        disabled = false;
+        allowed_msg = " ";
+        loaded_msg =  " ";
+        unloaded_msg = " ";
+        not_allowed_msg = " ";
+        style = "italic orange";
+        symbol = "direnv";
+        format = "[ | $symbol - $loaded | ]($style)";
+      };
       git_branch = {
         only_attached = true;
         format = "on ⌠ [$symbol  $branch(:$remote_branch) ]($style)⌡";

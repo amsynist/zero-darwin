@@ -22,4 +22,5 @@ with pkgs; [
   python313
   jankyborders
   unimatrix
+  devbox
 ]
