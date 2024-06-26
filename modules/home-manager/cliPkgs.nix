@@ -3,7 +3,6 @@ with pkgs; [
   ## Must Have Daily Cli Tools :)
   vim
   neofetch
-  neovim
   eza
   rclone
   yazi

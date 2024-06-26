@@ -6,5 +6,6 @@
     ./starship.nix
     ./atuin.nix
     ./wezterm.nix
+    # ./nixvim
   ];
 }

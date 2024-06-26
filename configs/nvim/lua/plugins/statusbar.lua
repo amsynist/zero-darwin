@@ -7,7 +7,12 @@ return {
 			opts.statusline = nil
 		end,
 	},
-	{ import = "astrocommunity/bars-and-lines/feline-nvim", enable = true },
+	{
+		"linrongbin16/lsp-progress.nvim",
+		config = function()
+			require("lsp-progress").setup()
+		end,
+	},
 	{
 		"freddiehaddad/feline.nvim",
 		config = function()
@@ -15,6 +20,9 @@ return {
 			if not present then
 				return
 			end
+
+			local separators = require("feline.defaults").statusline.separators.default_value
+			local lsp = require("feline.providers.lsp")
 
 			-- Customizations {{{
 			local theme = {
@@ -86,7 +94,7 @@ return {
 				provider = {
 					name = "file_info",
 				},
-				hl = { bg = "#E0A3AD", fg = "#000000", style = "italic" },
+				hl = { bg = "#92B3F5", fg = "#000000", style = "italic" },
 				left_sep = "",
 				right_sep = "",
 			}
@@ -155,46 +163,49 @@ return {
 
 			component.lsp = {
 				provider = function()
-					if not rawget(vim, "lsp") then
-						return ""
+					if not lsp.is_lsp_attached() then
+						return " 󱏎 LSP "
 					end
-
-					local progress = vim.lsp.util.get_progress_messages()[1]
-					if vim.o.columns < 120 then
-						return ""
-					end
-
-					local clients = vim.lsp.get_active_clients({ bufnr = 0 })
-					if #clients ~= 0 then
-						if progress then
-							local spinners = {
-								"◜ ",
-								"◠ ",
-								"◝ ",
-								"◞ ",
-								"◡ ",
-								"◟ ",
-							}
-							local ms = vim.loop.hrtime() / 1000000
-							local frame = math.floor(ms / 120) % #spinners
-							local content = string.format("%%<%s", spinners[frame + 1])
-							return content or ""
-						else
-							return "לּ LSP"
-						end
-					end
-					return ""
+					return string.format(" %s ", require("lsp-progress").progress())
 				end,
 				hl = function()
-					local progress = vim.lsp.util.get_progress_messages()[1]
+					if not lsp.is_lsp_attached() then
+						return {
+							bg = "#8FBCBB",
+							fg = "#000000",
+						}
+					end
 					return {
-						fg = progress and "yellow" or "green",
-						bg = "gray",
-						style = "bold",
+						bg = "#8FBCBB",
+						fg = "#000000",
 					}
 				end,
-				left_sep = " ",
-				right_sep = "block",
+				left_sep = {
+					always_visible = true,
+					str = separators.slant_right,
+					hl = function()
+						if not lsp.is_lsp_attached() then
+							return {
+								bg = "#8FBCBB",
+								fg = "#000000",
+							}
+						end
+						return {
+							bg = "#8FBCBB",
+							fg = "#000000",
+						}
+					end,
+				},
+				right_sep = {
+					always_visible = true,
+					str = separators.slant_right,
+					hl = function()
+						if not lsp.is_lsp_attached() then
+							return { fg = "#8FBCBB", bg = "none" }
+						end
+						return { fg = "#8FBCBB", bg = "none" }
+					end,
+				},
 			}
 
 			component.lsps = {
@@ -367,8 +378,6 @@ return {
 						{ -- right
 							component.file_type,
 							component.separator,
-
-							component.lsp,
 
 							component.lsps,
 							component.separator,

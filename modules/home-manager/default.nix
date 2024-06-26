@@ -25,6 +25,7 @@
     };
   };
 
+
   # State version for backward compatibility with Home Manager
   # Don't change this when you change package input. Leave it alone.
   home.stateVersion = "24.05"; # Previous state version was 23.11

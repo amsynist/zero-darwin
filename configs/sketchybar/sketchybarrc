@@ -83,6 +83,7 @@ sketchybar --default label.padding_left=8 \
 sketchybar --add item spot_logo center \
            --set spot_logo icon= \
                            label.drawing=off \
+                           click_script="~/.config/sketchybar/plugins/playpause.sh" \
                            icon.color=0xff121219 \
                            background.color=0xffEDC4E5
 
